@@ -16,7 +16,6 @@ import lombok.ToString;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
 public class Category {
 
 	@Id
@@ -27,4 +26,12 @@ public class Category {
 	private boolean active;
 	@DBRef
 	private Collection<Product> products = new ArrayList<Product>();
+
+	@Override
+	public String toString() {
+		return "Category [id=" + id + ", name=" + name + ", description=" + description + ", imageURl=" + imageURl
+				+ ", active=" + active + "]";
+	}
+	
+	
 }

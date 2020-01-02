@@ -31,22 +31,25 @@ public class EMarketOnlineApplication {
 			categoryRepository.findAll().forEach(System.out::println);
 			
 			productRepository.deleteAll();
-			String code1 = "PRD" +UUID.randomUUID().toString().substring(20).toUpperCase();
-			String code2 = "PRD" +UUID.randomUUID().toString().substring(20).toUpperCase();
-			String code3 = "PRD" +UUID.randomUUID().toString().substring(20).toUpperCase();
 			
-
-			Product p1 = productRepository.save(new Product(code1.substring(code1.length() - 1), code1, "Samsung S7", "Samsung", "The new samsung s7 available in the OnlineShopping Store", 32000, 5, 3, true, 2, 3, categoryRepository.findById("SMARPHONE").get()));
-			categoryRepository.findById("SMARPHONE").get().getProducts().add(p1);
-			categoryRepository.save(categoryRepository.findById("SMARPHONE").get());
+			Category categorie1 = categoryRepository.findById("SMARPHONE").get();
+			Product p1 = productRepository.save(new Product(null, ("PRD" +UUID.randomUUID().toString().substring(20).toUpperCase()), "Samsung S7", "Samsung", "The new Samsung s7 available in the OnlineShopping Store", 32000, 5, "https://i.gadgets360cdn.com/products/large/1555507135_635_samsung_galaxy_a60.jpg", 3, true, 2, 3, categorie1));
+			Product p1_1 = productRepository.save(new Product(null, ("PRD" +UUID.randomUUID().toString().substring(20).toUpperCase()), "Iphone 11", "Iphone", "The new Iphone 11 available in the OnlineShopping Store", 85000, 15, "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MWYK2?wid=1144&hei=1144&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1567304928359", 7, true, 8, 33, categorie1));
+			Product p1_2 = productRepository.save(new Product(null, ("PRD" +UUID.randomUUID().toString().substring(20).toUpperCase()), "Wiko Lenny5", "Wiko Lenny5", "The new Wiko Lenny5 available in the OnlineShopping Store", 2000, 8, "https://s3.eu-central-1.amazonaws.com/static2.euronics.it/immagini/img-catalogo-converted/full/192005940.jpg", 5, true, 89, 11, categorie1));
+			categorie1.getProducts().add(p1);
+			categorie1.getProducts().add(p1_1);
+			categorie1.getProducts().add(p1_2);
+			categoryRepository.save(categorie1);
 			
-			Product p2 = productRepository.save(new Product(code2.substring(code2.length() - 1), code2, "Lenovo", "Laptop", "The new lenovo Pc available in the OnlineShopping Store", 7000, 10, 3, true, 3, 13, categoryRepository.findById("LAPTOP").get()));
-			categoryRepository.findById("LAPTOP").get().getProducts().add(p2);
-			categoryRepository.save(categoryRepository.findById("LAPTOP").get());
+			Category categorie2 = categoryRepository.findById("LAPTOP").get();
+			Product p2 = productRepository.save(new Product(null, ("PRD" +UUID.randomUUID().toString().substring(20).toUpperCase()), "Lenovo", "Laptop", "The new lenovo Pc available in the OnlineShopping Store", 7000, 10, "https://images-na.ssl-images-amazon.com/images/I/51KWdrCyQQL._SX425_.jpg", 3, true, 3, 13, categorie2));
+			categorie2.getProducts().add(p2);
+			categoryRepository.save(categorie2);
 			
-			Product p3 = productRepository.save(new Product(code3.substring(code3.length() - 1), code3, "Akkai", "Tv", "The new Akkai Tv available in the OnlineShopping Store", 897000, 3, 1, true, 1, 11, categoryRepository.findById("TV").get()));
-			categoryRepository.findById("TV").get().getProducts().add(p3);
-			categoryRepository.save(categoryRepository.findById("TV").get());
+			Category categorie3 = categoryRepository.findById("TV").get();
+			Product p3 = productRepository.save(new Product(null, ("PRD" +UUID.randomUUID().toString().substring(20).toUpperCase()), "Akkai", "Tv", "The new Akkai Tv available in the OnlineShopping Store", 897000, 3, "https://images-na.ssl-images-amazon.com/images/I/81qPFjKF4ZL._SX466_.jpg", 1, true, 1, 11, categorie3));
+			categorie3.getProducts().add(p3);
+			categoryRepository.save(categorie3);
 			
 			productRepository.findAll().forEach(System.out::println);
 		};

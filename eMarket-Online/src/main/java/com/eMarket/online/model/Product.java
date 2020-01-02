@@ -24,6 +24,7 @@ public class Product {
 	private String description;
 	private double unitPrice;
 	private int categoryId;
+	private String imageURl;
 	private int supplierId;
 	private boolean active;
 	private int purchases;
