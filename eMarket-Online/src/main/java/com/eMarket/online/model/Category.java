@@ -25,7 +25,7 @@ public class Category {
 	private String imageURl;
 	private boolean active;
 	@DBRef
-	private Collection<Product> products = new ArrayList<Product>();
+	private Collection<Subcategory> subCategory = new ArrayList<Subcategory>();
 
 	@Override
 	public String toString() {
