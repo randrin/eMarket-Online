@@ -22,15 +22,15 @@ public class Category {
 	private String id;
 	private String name;
 	private String description;
-	private String imageURl;
-	private boolean active;
+	private String imageIcon;
+	private boolean activation;
 	@DBRef
 	private Collection<Subcategory> subCategory = new ArrayList<Subcategory>();
 
 	@Override
 	public String toString() {
-		return "Category [id=" + id + ", name=" + name + ", description=" + description + ", imageURl=" + imageURl
-				+ ", active=" + active + "]";
+		return "Category [id=" + id + ", name=" + name + ", description=" + description + ", imageIcon=" + imageIcon
+				+ ", activation=" + activation + "]";
 	}
 	
 	

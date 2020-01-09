@@ -20,15 +20,14 @@ public class Product {
 	private String id;
 	private String code;
 	private String name;
-	private String brand;
 	private String description;
 	private double unitPrice;
-	private int categoryId;
-	private String imageURl;
+	private String imagePath;
 	private int supplierId;
-	private boolean active;
-	private int purchases;
-	private int views;
+	private boolean activation;
+	private int totalStock;
+	private int totalPucharsed;
+	private int numberOfViews;
 	@DBRef
 	private Subcategory subCategory;
 }
