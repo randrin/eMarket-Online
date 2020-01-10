@@ -25,7 +25,7 @@ public class Category {
 	private String imageIcon;
 	private boolean activation;
 	@DBRef
-	private Collection<Subcategory> subCategory = new ArrayList<Subcategory>();
+	private Collection<Subcategory> subCategories = new ArrayList<Subcategory>();
 
 	@Override
 	public String toString() {

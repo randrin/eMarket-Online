@@ -23,4 +23,11 @@ public class Subcategory {
 	private String description;
 	@DBRef
 	private Collection<Product> products = new ArrayList<Product>();
+
+	@Override
+	public String toString() {
+		return "Subcategory [id=" + id + ", name=" + name + ", description=" + description + "]";
+	}
+	
+	
 }
