@@ -21,7 +21,10 @@ public class Product {
 	private String code;
 	private String name;
 	private String description;
-	private double unitPrice;
+	private double unitPriceNew;
+	private double unitPriceSold;
+	private boolean sale;
+	private int reductionPercent;
 	private String imagePath;
 	private int supplierId;
 	private boolean activation;
