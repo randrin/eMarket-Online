@@ -10,7 +10,9 @@ import com.eMarket.online.model.Product;
 
 @RepositoryRestResource
 public interface ProductRepository extends MongoRepository<Product, String>{
-	@RestResource(path = "/productActivated")
+	@RestResource(path = "/productsActivated")
 	List<Product> findByActivationIsTrue();
 
+	@RestResource(path = "/productsPromotion")
+	List<Product> findBySaleIsTrue();
 }
