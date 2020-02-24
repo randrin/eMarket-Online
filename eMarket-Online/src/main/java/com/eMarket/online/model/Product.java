@@ -23,6 +23,8 @@ public class Product {
 	private String description;
 	private double unitPriceNew;
 	private double unitPriceSold;
+	private String color;
+	private String size;
 	private boolean sale;
 	private int reductionPercent;
 	private String imagePath;
