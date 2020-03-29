@@ -1,8 +1,5 @@
 package com.eMarket.online.model;
 
-import java.util.ArrayList;
-import java.util.Collection;
-
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -16,22 +13,26 @@ import lombok.ToString;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Category {
-
+@ToString
+public class EmarketProduct {
+	
 	@Id
 	private String id;
+	private String code;
 	private String name;
 	private String description;
-	private String imageIcon;
+	private double unitPriceNew;
+	private double unitPriceSold;
+	private String color;
+	private String size;
+	private boolean sale;
+	private int reductionPercent;
+	private String imagePath;
+	private int supplierId;
 	private boolean activation;
+	private int totalStock;
+	private int totalPucharsed;
+	private int numberOfViews;
 	@DBRef
-	private Collection<Subcategory> subCategories = new ArrayList<Subcategory>();
-
-	@Override
-	public String toString() {
-		return "Category [id=" + id + ", name=" + name + ", description=" + description + ", imageIcon=" + imageIcon
-				+ ", activation=" + activation + "]";
-	}
-	
-	
+	private EmarketSubCategory subCategory;
 }

@@ -6,13 +6,13 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.data.rest.core.annotation.RestResource;
 
-import com.eMarket.online.model.Product;
+import com.eMarket.online.model.EmarketProduct;
 
 @RepositoryRestResource
-public interface ProductRepository extends MongoRepository<Product, String>{
+public interface EmarketProductRepository extends MongoRepository<EmarketProduct, String>{
 	@RestResource(path = "/productsActivated")
-	List<Product> findByActivationIsTrue();
+	List<EmarketProduct> findByActivationIsTrue();
 
 	@RestResource(path = "/productsPromotion")
-	List<Product> findBySaleIsTrue();
+	List<EmarketProduct> findBySaleIsTrue();
 }

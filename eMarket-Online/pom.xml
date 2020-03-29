@@ -13,7 +13,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>eMarket-Online</name>
-	<description>Plateforme de produits/service en ligne et Gestion de Stock Marchandises </description>
+	<description>Plateforme de produits/services en ligne et Gestion de Stock Marchandises</description>
 
 	<properties>
 		<java.version>1.8</java.version>
