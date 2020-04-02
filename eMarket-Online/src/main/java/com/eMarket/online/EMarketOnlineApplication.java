@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 
@@ -20,6 +21,7 @@ import com.eMarket.online.respository.EmarketSubCategoryRepository;
 import com.eMarket.online.utils.EmarketUtils;
 
 @SpringBootApplication
+@EnableEurekaClient
 public class EMarketOnlineApplication {
 
 	@Autowired
@@ -28,7 +30,7 @@ public class EMarketOnlineApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(EMarketOnlineApplication.class, args);
 	}
-
+	
 	/**
 	 * @param categoryRepository
 	 * @param productRepository
